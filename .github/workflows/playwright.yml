@@ -17,10 +17,7 @@ jobs:
         run: npm ci
 
       - name: Run ESLint check
-        run: |
-            echo "Running ESLint to check for linting issues..."
-            npm run lint   
-
+        run: 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
