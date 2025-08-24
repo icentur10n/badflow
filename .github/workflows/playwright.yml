@@ -17,7 +17,15 @@ jobs:
         run: npm ci
 
       - name: Run ESLint check
-        run: 
+        run: |
+            echo "Running ESLint to check for linting issues..."
+            npm run lint   
+
+      - name: Run Prettier check
+        run: |
+            echo "Running Prettier to check for formatting issues..."
+            npm run check
+
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
